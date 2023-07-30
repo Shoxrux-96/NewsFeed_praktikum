@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    {% block content %}
+    <h1>All news list</h1>
+    {% for news in news_list %}
+    <li><a href="{% url 'single_page' news.pk %}">{{news.title}}</a></li>
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>

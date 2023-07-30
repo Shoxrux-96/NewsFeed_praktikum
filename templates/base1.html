@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="{% url 'home_page' %}">Django blog</a></h1> <!-- # home_page  - app ichidagi urls.py ga berilgan nom -->
+
+    {% block content %}
+   
+
+    {% endblock%}
+</body>
+</html>
